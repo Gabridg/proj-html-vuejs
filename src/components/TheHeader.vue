@@ -5,7 +5,7 @@
                 <div class="d-flex justify-content-between align-items-center">
                     <span>We have a 95% Successful Pass Rate!</span>
                     <span>
-                        <i class="fa-solid fa-phone-flip p-end-1"></i>
+                        <i class="fa-solid fa-phone-flip pe-2"></i>
                         give us a call to book your tuition!
                         1-800-555-555
                     </span>
@@ -56,7 +56,7 @@ export default {
 #alert-info {
     background-color: var(--grey);
     color: var(--lightgrey);
-    padding: 5px;
+    padding: 15px;
 
     span {
         font-size: 12px;
@@ -66,10 +66,9 @@ export default {
 ul {
     list-style: none;
     margin-bottom: 0;
-    filter: opacity(1);
 
     li {
-        padding: 0 10px;
+        padding: 15px 30px;
     }
 
     a {
@@ -96,8 +95,7 @@ ul {
 }
 
 .navbar {
-    background-color: var(--lightdark);
-    filter: opacity(0.5);
+    background-color: #0005;
     position: absolute;
     width: 100%;
     padding: 20px 0;
