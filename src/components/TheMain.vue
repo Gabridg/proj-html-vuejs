@@ -42,7 +42,7 @@
 
                 </div>
                 <div class="school-info">
-
+                    <Coursecard></Coursecard>
                 </div>
             </div>
         </section>
@@ -51,9 +51,21 @@
 
 <script>
 import FormsCard from './FormsCard.vue';
+import Coursecard from './Coursecard.vue';
 export default {
     name: "TheMain",
-    components: { FormsCard },
+    components: { FormsCard, Coursecard },
+    data() {
+        return {
+            typeOfCours: [
+                {
+                    poster: '../assets/img/courses-passplus.jpg',
+                    title: 'Pass Plus'
+                }
+            ]
+
+        }
+    },
     methods: {
         userLogin() {
             return alert('Hai effettuato il login!');
