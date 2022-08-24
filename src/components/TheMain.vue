@@ -22,8 +22,29 @@
                 <FormsCard @userInfo="userLogin"></FormsCard>
             </section>
         </div>
+        <section id="courses-head">
+            <div class="container h-100">
+                <div class="h-100 d-flex align-items-center justify-content-between">
+                    <div>
+                        <h2>Start Learning to Drive Today</h2>
+                        <span>Give us a call to schedule your first driving lesson</span>
+                    </div>
+                    <div class="text-center">
+                        <i class="fa-solid fa-phone-flip fa-2x"></i>
+                        <span id="phone-number">1-800-555-555</span>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section id="courses">
+            <div class="container">
+                <div class="info-courses">
 
+                </div>
+                <div class="school-info">
+
+                </div>
+            </div>
         </section>
     </div>
 </template>
@@ -35,7 +56,7 @@ export default {
     components: { FormsCard },
     methods: {
         userLogin() {
-            return alert('Hai effettuato il login!')
+            return alert('Hai effettuato il login!');
         }
     }
 }
@@ -61,6 +82,35 @@ export default {
 
     span {
         color: var(--secondarygrey);
+    }
+}
+
+#courses-head {
+    background-image: url("../assets/img/horizontal-cta-background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    color: var(--white);
+    vertical-align: middle;
+
+    h2 {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    span {
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    #phone-number {
+        font-size: 40px;
+        font-weight: normal;
+    }
+
+    .fa-phone-flip {
+        margin-right: 35px;
     }
 }
 </style>
