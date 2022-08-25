@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <TheHeader></TheHeader>
+    <TheHeader :home="home" :about="about" :prices="prices" :courses="courses" :locations="locations" :blog="blog">
+    </TheHeader>
     <TheMain></TheMain>
     <TopFooter></TopFooter>
     <BottomFooter></BottomFooter>
@@ -22,7 +23,14 @@ export default {
     BottomFooter
   },
   data() {
-
+    return {
+      home: 'HOME',
+      about: 'ABOUT',
+      prices: 'PRICES',
+      courses: 'COURSES',
+      locations: 'LOCATIONS',
+      blog: 'BLOG',
+    }
   }
 }
 </script>

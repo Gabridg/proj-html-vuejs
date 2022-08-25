@@ -20,12 +20,12 @@
                     </div>
                     <div>
                         <ul class="d-flex align-items-center">
-                            <li><a href="#">HOME</a></li>
-                            <li><a href="#">ABOUT</a></li>
-                            <li><a href="#">PRICES</a></li>
-                            <li><a href="#">COURSES</a></li>
-                            <li><a href="#">LOCATIONS</a></li>
-                            <li><a href="#">BLOG</a></li>
+                            <li><a href="#">{{ home }}</a></li>
+                            <li><a href="#">{{ about }}</a></li>
+                            <li><a href="#">{{ prices }}</a></li>
+                            <li><a href="#">{{ courses }}</a></li>
+                            <li><a href="#">{{ locations }}</a></li>
+                            <li><a href="#">{{ blog }}</a></li>
                             <li><a href="#" class="btn btn-primary rounded-pill">BOOK NOW</a></li>
 
                         </ul>
@@ -46,6 +46,14 @@
 <script>
 export default {
     name: 'TheHeader',
+    props: {
+        home: String,
+        about: String,
+        prices: String,
+        courses: String,
+        locations: String,
+        blog: String
+    }
 }
 </script>
 
@@ -74,6 +82,7 @@ ul {
     a {
         text-decoration: none;
         color: var(--white);
+        font-weight: bold;
     }
 
     a:hover {
