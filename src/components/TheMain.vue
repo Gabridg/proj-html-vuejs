@@ -243,7 +243,7 @@ export default {
 .rate-card {
     margin: 150px auto;
     width: 400px;
-    height: 500;
+    height: 450px;
     text-align: center;
     border-top: 5px solid var(--green);
     border-radius: 20px;
@@ -257,7 +257,14 @@ export default {
         text-align: center;
         line-height: 200px;
         font-size: 50px;
-        margin: 40px auto;
+        margin: 50px auto;
+    }
+
+    h4 {
+        color: var(--lightgrey);
+        font-weight: 600;
+        font-size: 18px;
+        margin: 60px;
     }
 }
 </style>
