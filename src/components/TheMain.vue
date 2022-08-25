@@ -159,14 +159,48 @@
                 </div>
             </div>
         </section>
+        <section id="testimonials">
+            <div class="container">
+                <h2>Testimonials</h2>
+                <span>Here's what our happy drivers had to say about our services:</span>
+                <TestimonialCard>
+                </TestimonialCard>
+            </div>
+        </section>
+        <section id="latest-news">
+            <div class="container">
+                <div class="news-card text-center">
+                    <h2 class="text-center">Latest News</h2>
+                    <div class="d-flex justify-content-between">
+
+                        <div class="text-center mt-3 card-int">
+                            <img src="../assets/img/blog-choosecar-320x202.jpg" alt="">
+                            <h4>What Car to Start With?</h4>
+                            <span class="data">February 7th, 2019 | <a href="">0 Comments</a></span>
+                            <span>Lorem impsum dolor sit amet, consectetur adipising</span>
+                        </div>
+                        <div class="text-center mt-3 card-int">
+                            <img src="../assets/img/blogpost-10and2-320x202.jpg" alt="">
+                            <h4>Avada drivin School Expanding</h4>
+                            <span class="data">February 7th, 2019 | <a href="">0 Comments</a></span>
+                            <span>Lorem impsum dolor sit amet, consectetur adipising</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary rounded-pill mt-4">MORE FROM THE BLOG</a>
+                </div>
+                <img src="../assets/img/latestnews-bottom-800x70.png" alt="" class="footer-latest-news">
+            </div>
+        </section>
     </div>
 </template>
 
 <script>
 import FormsCard from './FormsCard.vue';
+import TestimonialCard from './TestimonialCard.vue';
 export default {
     name: "TheMain",
-    components: { FormsCard, },
+    components: { FormsCard, TestimonialCard },
+
     methods: {
         userLogin() {
             return alert('Hai effettuato il login!');
@@ -406,6 +440,7 @@ export default {
         line-height: 45px;
         font-weight: 400;
         font-size: 20px;
+        margin-top: 50px;
     }
 
     a {
@@ -428,6 +463,10 @@ export default {
         border-top: 5px solid var(--green);
         border-radius: 20px;
         box-shadow: 5px 5px 25px var(--grey);
+        position: relative;
+        bottom: -100px;
+        left: 0;
+        background-color: var(--white);
 
         img {
             width: 250px;
@@ -450,5 +489,79 @@ export default {
             margin: 10px;
         }
     }
+}
+
+#testimonials {
+    text-align: center;
+
+    h2 {
+        color: var(--grey);
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+    span {
+        color: var(--secondarygrey);
+        font-size: 20px;
+    }
+}
+
+#latest-news {
+    background-image: url("../assets/img/latestnews-background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+
+    .news-card {
+        background-color: var(--white);
+        max-width: 850px;
+        margin: 0 auto;
+        height: 500px;
+        border-top: 4px solid var(--secondarygrey);
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        position: relative;
+        top: -50px;
+        left: 0;
+
+        img {
+            height: 200px;
+            width: 300px;
+            padding: 10px
+        }
+
+        .card-int {
+            margin-right: 30px;
+
+            h4 {
+                color: var(--green);
+                font-weight: 600;
+            }
+
+            .data {
+                display: block;
+                font-size: 12px;
+
+                a {
+                    color: var(--secondarygrey);
+                    text-decoration: none;
+                }
+            }
+
+            span {
+                color: var(--grey);
+                font-size: 18px;
+            }
+        }
+    }
+
+    .footer-latest-news {
+        position: relative;
+        top: -50px;
+        left: 224px;
+        width: 850px;
+    }
+
 }
 </style>
