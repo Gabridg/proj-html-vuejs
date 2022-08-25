@@ -20,6 +20,9 @@ export default {
     TheMain,
     TopFooter,
     BottomFooter
+  },
+  data() {
+
   }
 }
 </script>

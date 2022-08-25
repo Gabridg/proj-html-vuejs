@@ -81,23 +81,63 @@
             <div class="container">
                 <div class="d-flex">
                     <div class="rate-card">
-                        <div class="rate">
-                            95%
+                        <div class="circle">
+                            <div class="almost-fill">
+                                <div class="rate">
+                                    95%
+                                </div>
+                            </div>
                         </div>
                         <h4>PASS RATE</h4>
                     </div>
                     <div class="rate-card">
-                        <div class="rate">
-                            100%
+                        <div class="circle">
+                            <div class="fill">
+                                <div class="rate">
+                                    100%
+                                </div>
+                            </div>
                         </div>
                         <h4>REFERRAL RATE</h4>
                     </div>
                     <div class="rate-card">
-                        <div class="rate">
-                            0%
+                        <div class="circle">
+                            <div class="empty">
+                                <div class="rate">
+                                    0%
+                                </div>
+                            </div>
                         </div>
                         <h4>ACCIDENT RATE</h4>
                     </div>
+                </div>
+            </div>
+        </section>
+        <section id="instructors">
+            <div class="container">
+                <h2>Your Instructors</h2>
+                <div class="row">
+                    <p class="col-8">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat earum obcaecati quidem hic
+                        dolorum,
+                        distinctio, laboriosam quas eligendi eos eveniet excepturi voluptatem neque!
+                    </p>
+                    <a href="#" class="btn btn-primary rounded-pill col-4">MORE ABOUT US</a>
+                </div>
+                <div class="instructor-card">
+                    <img src="../assets/img/instructor-mikehart.jpg" alt="Mike Hart">
+                    <h4>Mike Hart</h4>
+                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+                </div>
+                <div class="instructor-card">
+                    <img src="../assets/img/instructor-johnsmith.jpg" alt="John Smith">
+                    <h4>John Smith</h4>
+                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+                </div>
+                <div class="instructor-card">
+                    <img src="../assets/img/instructor-angelahart.jpg" alt="Angela Hart">
+                    <h4>Angela Hart</h4>
+                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
                 </div>
             </div>
         </section>
@@ -249,22 +289,112 @@ export default {
     border-radius: 20px;
     box-shadow: 5px 5px 25px var(--grey);
 
-    .rate {
-        width: 200px;
-        height: 200px;
+    .circle {
+        width: 250px;
+        height: 250px;
         border-radius: 50%;
-        border: 8px solid var(--green);
-        text-align: center;
-        line-height: 200px;
-        font-size: 50px;
+        background-color: var(--green);
         margin: 50px auto;
+    }
+
+    .almost-fill {
+        width: 250px;
+        height: 250px;
+        position: relative;
+        background: conic-gradient(var(--green) 342deg, var(--white) 0deg);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .fill {
+        width: 250px;
+        height: 250px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .empty {
+        width: 250px;
+        height: 250px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: conic-gradient(var(--green) 10deg, var(--white) 0deg);
+        border: 1px solid var(--green);
+        border-radius: 50%;
+    }
+
+    .empty::before {
+        content: "";
+        position: absolute;
+        height: 210px;
+        width: 210px;
+        border-radius: 50%;
+        background-color: var(--white);
+        border: 1px solid var(--green);
+    }
+
+    .fill::before {
+        content: "";
+        position: absolute;
+        height: 210px;
+        width: 210px;
+        border-radius: 50%;
+        background-color: var(--white);
+    }
+
+    .almost-fill::before {
+        content: "";
+        position: absolute;
+        height: 210px;
+        width: 210px;
+        border-radius: 50%;
+        background-color: var(--white);
+    }
+
+    .rate {
+        line-height: 185px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 32px;
+        position: relative;
     }
 
     h4 {
         color: var(--lightgrey);
         font-weight: 600;
         font-size: 18px;
-        margin: 60px;
+        margin: 60px auto;
+        transform: rotate(0deg);
+    }
+
+}
+
+#instructors {
+    h2 {
+        font-size: 45px;
+        font-weight: 600;
+        color: var(--grey);
+    }
+
+    p {
+        color: var(--secondarygrey);
+        line-height: 45px;
+        font-weight: 400;
+        font-size: 20px;
+    }
+
+    a {
+        margin-top: 15px;
+        height: 40px;
+        font-size: 15px;
+        font-weight: 600;
     }
 }
 </style>
