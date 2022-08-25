@@ -193,7 +193,7 @@
         </section>
         <section id="newsletter">
             <div class="container">
-                <h2></h2>
+                <h2>Sign up to our Newsletter</h2>
                 <div class="form-newsletter">
                     <input type="text" class="form-control">
                     <a href="#" class="btn btn-primary rounded-pill">SUBSCRIBE</a>
@@ -580,9 +580,16 @@ export default {
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 300px;
+    height: 350px;
     text-align: center;
     margin-top: -20px;
+
+    h2 {
+        font-size: 35px;
+        font-weight: 600;
+        padding-top: 30px;
+        color: var(--grey);
+    }
 
     .form-newsletter {
         padding-top: 50px;
