@@ -191,6 +191,16 @@
                 <img src="../assets/img/latestnews-bottom-800x70.png" alt="" class="footer-latest-news">
             </div>
         </section>
+        <section id="newsletter">
+            <div class="container">
+                <h2></h2>
+                <div class="form-newsletter">
+                    <input type="text" class="form-control">
+                    <a href="#" class="btn btn-primary rounded-pill">SUBSCRIBE</a>
+                    <p>(We do not share yopur data with anybody, and only use it for its intended purpose)</p>
+                </div>
+            </div>
+        </section>
     </div>
 </template>
 
@@ -563,5 +573,34 @@ export default {
         width: 850px;
     }
 
+}
+
+#newsletter {
+    background-image: url("../assets/img/newsletter_background.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    text-align: center;
+    margin-top: -20px;
+
+    .form-newsletter {
+        padding-top: 50px;
+    }
+
+    .form-newsletter input {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    .form-newsletter a {
+        margin-top: 50px;
+        padding: 5px 160px;
+    }
+
+    .form-newsletter p {
+        margin-top: 25px;
+    }
 }
 </style>
