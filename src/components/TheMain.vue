@@ -124,20 +124,38 @@
                     </p>
                     <a href="#" class="btn btn-primary rounded-pill col-4">MORE ABOUT US</a>
                 </div>
-                <div class="instructor-card">
-                    <img src="../assets/img/instructor-mikehart.jpg" alt="Mike Hart">
-                    <h4>Mike Hart</h4>
-                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
-                </div>
-                <div class="instructor-card">
-                    <img src="../assets/img/instructor-johnsmith.jpg" alt="John Smith">
-                    <h4>John Smith</h4>
-                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
-                </div>
-                <div class="instructor-card">
-                    <img src="../assets/img/instructor-angelahart.jpg" alt="Angela Hart">
-                    <h4>Angela Hart</h4>
-                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+                <div id="card-inst">
+
+                    <div class="instructor-card">
+                        <img src="../assets/img/instructor-mikehart.jpg" alt="Mike Hart" class="img-fluid">
+                        <h4>Mike Hart</h4>
+                        <div class="social">
+                            <i class="fa-brands fa-facebook-f fa-2x"></i>
+                            <i class="fa-brands fa-twitter fa-2x"></i>
+                            <i class="fa-brands fa-instagram fa-2x"></i>
+                        </div>
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+                    </div>
+                    <div class="instructor-card">
+                        <img src="../assets/img/instructor-johnsmith.jpg" alt="John Smith" class="img-fluid">
+                        <h4>John Smith</h4>
+                        <div class="social">
+                            <i class="fa-brands fa-facebook-f fa-2x"></i>
+                            <i class="fa-brands fa-twitter fa-2x"></i>
+                            <i class="fa-brands fa-instagram fa-2x"></i>
+                        </div>
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+                    </div>
+                    <div class="instructor-card">
+                        <img src="../assets/img/instructor-angelahart.jpg" alt="Angela Hart" class="img-fluid">
+                        <h4>Angela Hart</h4>
+                        <div class="social">
+                            <i class="fa-brands fa-facebook-f fa-2x"></i>
+                            <i class="fa-brands fa-twitter fa-2x"></i>
+                            <i class="fa-brands fa-instagram fa-2x"></i>
+                        </div>
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -211,7 +229,7 @@ export default {
 }
 
 #courses {
-    background-image: url(../assets/img/promise-background.jpg);
+    background-image: url("../assets/img/promise-background.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -395,6 +413,42 @@ export default {
         height: 40px;
         font-size: 15px;
         font-weight: 600;
+    }
+
+    #card-inst {
+        display: flex;
+    }
+
+    .instructor-card {
+        max-width: 450px;
+        height: 500px;
+        border-radius: 20px;
+        margin: 50px;
+        text-align: center;
+        border-top: 5px solid var(--green);
+        border-radius: 20px;
+        box-shadow: 5px 5px 25px var(--grey);
+
+        img {
+            width: 250px;
+            margin: 50px auto;
+        }
+
+        span {
+            line-height: 35px;
+            color: var(--grey);
+            font-weight: 600;
+        }
+    }
+
+    .social {
+        color: var(--grey);
+        margin: 25px;
+        font-size: 12px;
+
+        .fa-brands {
+            margin: 10px;
+        }
     }
 }
 </style>
